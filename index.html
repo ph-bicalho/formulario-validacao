@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de validação</title>
+    <link rel="stylesheet" href="./src/fontes.css" />
+    <link rel="stylesheet" href="./src/reset.css" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container-flex">
+        <div class="container-texto">
+          <h2>
+            FICOU COM DÚVIDA?<br />
+            NOS MANDE UMA MENSAGEM!
+          </h2>
+          <p>
+            caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem
+            e entraremos em contato em menos de 24h.
+          </p>
+        </div>
+        <form action="POST" method="POST" id="formulario-contato">
+          <input
+            class="formularioInput"
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="Nome Completo *"
+            required
+          />
+          <div><span class="mensagem-erro">Campo obrigatório</span></div>
+          <input
+            id="email"
+            class="formularioInput"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email *"
+            required
+          />
+          <div><span class="mensagem-erro">Campo obrigatório</span></div>
+          <input
+            class="formularioInput"
+            type="tel"
+            name="telefone"
+            id="telefone"
+            placeholder="Telefone *"
+            required
+          />
+          <div><span class="mensagem-erro">Campo obrigatório</span></div>
+          <textarea
+            class="formularioInput"
+            name="mensagem"
+            id="mensagem"
+            cols="30"
+            rows="7"
+            placeholder="Mensagem *"
+            required
+          ></textarea>
+          <div><span class="mensagem-erro">Campo obrigatório</span></div>
+          <p>* Campos Obrigatórios</p>
+          <input type="button" value="Enviar" id="enviar" />
+        </form>
+      </div>
+    </main>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
