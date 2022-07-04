@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário de validação</title>
-    <link rel="stylesheet" href="./src/fontes.css" />
-    <link rel="stylesheet" href="./src/reset.css" />
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/css/fontes.css" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
     <main>
@@ -22,7 +22,7 @@
             e entraremos em contato em menos de 24h.
           </p>
         </div>
-        <form action="POST" method="POST" id="formulario-contato">
+        <form id="formulario-contato">
           <input
             class="formularioInput"
             type="text"
@@ -31,7 +31,7 @@
             placeholder="Nome Completo *"
             required
           />
-          <div><span class="mensagem-erro">Campo obrigatório</span></div>
+          <div><span class="mensagem-erro" id="nome-erro" >Campo obrigatório *</span></div>
           <input
             id="email"
             class="formularioInput"
@@ -41,7 +41,7 @@
             placeholder="Email *"
             required
           />
-          <div><span class="mensagem-erro">Campo obrigatório</span></div>
+          <div><span class="mensagem-erro" id="email-erro" >Campo obrigatório *</span></div>
           <input
             class="formularioInput"
             type="tel"
@@ -50,7 +50,7 @@
             placeholder="Telefone *"
             required
           />
-          <div><span class="mensagem-erro">Campo obrigatório</span></div>
+          <div><span class="mensagem-erro" id="telefone-erro" >Campo obrigatório *</span></div>
           <textarea
             class="formularioInput"
             name="mensagem"
@@ -60,12 +60,14 @@
             placeholder="Mensagem *"
             required
           ></textarea>
-          <div><span class="mensagem-erro">Campo obrigatório</span></div>
+          <div><span class="mensagem-erro" id="mensagem-erro" >Campo obrigatório *</span></div>
           <p>* Campos Obrigatórios</p>
-          <input type="button" value="Enviar" id="enviar" />
+          <button
+            type="submit" id="enviar">Enviar</button>
+          
         </form>
       </div>
     </main>
-    <script src="./src/script.js"></script>
+    <script src="./src/scripts/script.js"></script>
   </body>
 </html>

@@ -52,6 +52,7 @@ main{
 
 #formulario-contato #enviar{
     background-color: #3CCC87;
+    border-radius: 10px;
     border-style: none;
     color: #fff;
     padding: 15px;
@@ -64,4 +65,9 @@ main{
     font-size: small;
     position: absolute;
     transform: translateY(-15px);
+}
+.border-verde{
+   
+    border: 1px solid #3CCC87 !important;
+
 }
