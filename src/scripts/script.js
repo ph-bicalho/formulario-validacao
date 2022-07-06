@@ -1,91 +1,103 @@
-const nomeErro= document.getElementById('nome-erro')
-const emailErro= document.getElementById('email-erro')
-const telefoneErro= document.getElementById('telefone-erro')
-const mensagemErro = document.getElementById('mensagem-erro')
+const nomeErro = document.getElementById('nome-erro');
+const emailErro = document.getElementById('email-erro');
+const telefoneErro = document.getElementById('telefone-erro');
+const mensagemErro = document.getElementById('mensagem-erro');
 
-const nomeInput =document.getElementById('nome')
-const emailInput =document.getElementById('email')
-const telefoneInput =document.getElementById('telefone')
-const mensagemInput = document.getElementById('mensagem')
-const todosInputs = [nomeInput, emailInput, telefoneInput, mensagemInput]
+const nomeInput = document.getElementById('nome');
+const emailInput = document.getElementById('email');
+const telefoneInput = document.getElementById('telefone');
+const mensagemInput = document.getElementById('mensagem');
+const todosInputs = [nomeInput, emailInput, telefoneInput, mensagemInput];
 
-const enviarBtn = document.getElementById('enviar')
+const enviarBtn = document.getElementById('enviar');
 
 
     // detectando se os inputs estão vazios, 
 // se estiver colocar borda vermelha e adicinando a mensagem de errro
 
 enviarBtn.addEventListener('click', (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
     if (nomeInput.value == ''){
         nomeErro.style.display = 'block'
-        nomeInput.style.borderColor = 'red'
+        nomeInput.classList.add('erro')
     }else{
-        nomeInput.style.borderColor= 'lightGreen'
         nomeErro.style.display = 'none'
-    }
+    };
+
     if (emailInput.value == ''){
         emailErro.style.display = 'block'
-        emailInput.style.borderColor = 'red'
-    }else{
-        emailInput.style.borderColor= 'lightGreen'
+        emailInput.classList.add('erro')
+    }else{     
         emailErro.style.display = 'none'
-    }
+    };
+
     if (telefoneInput.value == ''){
         telefoneErro.style.display = 'block'
-        telefone.style.borderColor = 'red'
+        telefoneInput.classList.add('erro')
     }else{
-        telefoneInput.style.borderColor= 'lightGreen'
         telefoneErro.style.display = 'none'
-    }
+    };
+
     if (mensagemInput.value == ''){
         mensagemErro.style.display = 'block'
-        mensagem.style.borderColor = 'red'
+        mensagemInput.classList.add('erro')
     }else{
-        mensagemInput.style.borderColor= 'lightGreen'
         mensagemErro.style.display = 'none'
-    }
+    };
+
 
     if (nomeInput.value != '' && emailInput.value != '' && telefoneInput.value != '' && mensagemInput.value != '' ){
         alert('mensagem enviada!')
         
-    } 
-})
+    };
+});
     
     // colocando bordas verdes quando o input é mudado
 
 nomeInput.addEventListener('change', () => {
     
     if (nomeInput.value > ''){
-        nomeInput.classList.add('border-verde')
+        nomeInput.classList.add('sucesso')
+        nomeInput.classList.remove('erro')
     }else{
-        nomeInput.classList.remove('border-verde')
-    }
-})
+        nomeInput.classList.remove('sucesso')
+        nomeInput.classList.add('erro')
+    };
+
+});
 emailInput.addEventListener('change', () => {
     
     if (emailInput.value > ''){
-        emailInput.classList.add('border-verde')
+        emailInput.classList.add('sucesso')
+        emailInput.classList.remove('erro')
     }else{
-        emailInput.classList.remove('border-verde')
-    }
+        emailInput.classList.remove('sucesso')
+        emailInput.classList.add('erro')
+    };
+
 });
 
 telefoneInput.addEventListener('change', () => {
     
     if (telefoneInput.value > ''){
-        telefoneInput.classList.add('border-verde')
+        telefoneInput.classList.add('sucesso')
+        telefoneInput.classList.remove('erro')
     }else{
-        telefoneInput.classList.remove('border-verde')
-    }
-})
+        telefoneInput.classList.remove('sucesso')
+        telefoneInput.classList.add('erro')
+    };
+
+});
 mensagemInput.addEventListener('change', () => {
     
     if (mensagemInput.value > ''){
-        mensagemInput.classList.add('border-verde')
+        mensagemInput.classList.add('sucesso')
+        mensagemInput.classList.remove('erro')
     }else{
-        mensagemInput.classList.remove('border-verde')
-    }
-})
+        mensagemInput.classList.remove('sucesso')
+        mensagemInput.classList.add('erro')
+    };
+
+});
 

@@ -61,13 +61,15 @@ main{
 }
 #formulario-contato .mensagem-erro{
     display: none;
-    color: red;
+    color: #ff3939;
     font-size: small;
     position: absolute;
     transform: translateY(-15px);
 }
-.border-verde{
+.sucesso{
    
     border: 1px solid #3CCC87 !important;
 
 }
+.erro{
+    border: 1px solid #ff3939 !important;}
