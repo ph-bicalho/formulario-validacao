@@ -21,35 +21,26 @@ enviarBtn.addEventListener('click', (event) => {
     if (nomeInput.value == ''){
         nomeErro.style.display = 'block'
         nomeInput.classList.add('erro')
-    }else{
-        nomeErro.style.display = 'none'
-    };
+    }
 
     if (emailInput.value == ''){
         emailErro.style.display = 'block'
         emailInput.classList.add('erro')
-    }else{     
-        emailErro.style.display = 'none'
-    };
+    }
 
     if (telefoneInput.value == ''){
         telefoneErro.style.display = 'block'
         telefoneInput.classList.add('erro')
-    }else{
-        telefoneErro.style.display = 'none'
-    };
+    }
 
     if (mensagemInput.value == ''){
         mensagemErro.style.display = 'block'
         mensagemInput.classList.add('erro')
-    }else{
-        mensagemErro.style.display = 'none'
-    };
-
+    }
 
     if (nomeInput.value != '' && emailInput.value != '' && telefoneInput.value != '' && mensagemInput.value != '' ){
         alert('mensagem enviada!')
-        
+        localStorage.getItem
     };
 });
     
@@ -60,9 +51,11 @@ nomeInput.addEventListener('change', () => {
     if (nomeInput.value > ''){
         nomeInput.classList.add('sucesso')
         nomeInput.classList.remove('erro')
+        nomeErro.style.display = 'none';
     }else{
         nomeInput.classList.remove('sucesso')
         nomeInput.classList.add('erro')
+        
     };
 
 });
@@ -71,9 +64,11 @@ emailInput.addEventListener('change', () => {
     if (emailInput.value > ''){
         emailInput.classList.add('sucesso')
         emailInput.classList.remove('erro')
+        emailErro.style.display = 'none'
     }else{
         emailInput.classList.remove('sucesso')
         emailInput.classList.add('erro')
+    
     };
 
 });
@@ -83,9 +78,11 @@ telefoneInput.addEventListener('change', () => {
     if (telefoneInput.value > ''){
         telefoneInput.classList.add('sucesso')
         telefoneInput.classList.remove('erro')
+        telefoneErro.style.display = 'none'
     }else{
         telefoneInput.classList.remove('sucesso')
         telefoneInput.classList.add('erro')
+        
     };
 
 });
@@ -94,10 +91,11 @@ mensagemInput.addEventListener('change', () => {
     if (mensagemInput.value > ''){
         mensagemInput.classList.add('sucesso')
         mensagemInput.classList.remove('erro')
+        mensagemErro.style.display = 'none'
     }else{
         mensagemInput.classList.remove('sucesso')
         mensagemInput.classList.add('erro')
+        
     };
 
 });
-
